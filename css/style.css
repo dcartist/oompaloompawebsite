@@ -1,0 +1,364 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #512e26;
+}
+
+button,
+textarea,
+input,
+select,
+a, 
+input:focus,
+textarea:focus,
+select:focus
+{
+    outline: none;
+}
+
+.appBase {
+    display: flex;
+    flex-direction: column;
+}
+/* --------------------------------- Buttons -------------------------------- */
+.greenFilledButton {
+    background-color: #60953e;
+    border: 2px #60953e solid;
+    color: white;
+}
+.greenBorderButton {
+    background-color: transparent;
+    border: 2px #60953e solid;
+    color: white;
+}
+.whiteBorderButton {
+    background-color: transparent;
+    border: 2px white solid;
+    color: white;
+}
+.smallButton {
+    height: 30px;
+    width: 150px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+#message, #modalMessage{
+    margin-top: -5px;
+    margin: -5px auto;
+    /* letter-spacing: 1.3px; */
+}
+/* ------------------------------ Intro Section ----------------------------- */
+.introBackground {
+    min-height: 80vh;
+    background-image: url("../images/IMAGE.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 30px;
+}
+.introBackground img {
+    width: 60%;
+    padding: 5px;
+    margin: auto;
+}
+.introBackground div {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.introBackground form input {
+    padding: 10px;
+    letter-spacing: 1.5px;
+    width: 300px;
+}
+.introBackground form ::placeholder {
+    color: #757575;
+    opacity: 0.7;
+}
+.introBackground form input[type=text] {
+    background-color: white;
+    color: #979797b4;
+}
+.introBackground form :-ms-input-placeholder {
+    color: #757575;
+    opacity: 0.7;
+}
+.introBackground form ::-ms-input-placeholder {
+    color: #757575;
+    opacity: 0.7;
+}
+.introBackground form button {
+    margin: 5px auto;
+    display: block;
+}
+.introBackground .loginButton {
+    margin: 5px auto;
+}
+/* ---------------------------------- Modal --------------------------------- */
+.introBackground .login {
+    z-index: 1125;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 400px;
+    background: black;
+    max-width: 100%;
+    padding: 60px;
+    top: 50%;
+   /*************************** * WHITE BORDER BACKGROUND * ***************************/
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 2px solid #fafafa;
+    box-shadow: 0px 0px 0px 20px black;
+}
+.introBackground .login .close{
+    text-align: right;
+    margin-top:-50px;
+    padding: 10px;
+    /* background-color: black; */
+    color: white;
+    width: 100%;
+    margin-left: 45px;
+    position: relative;
+    margin-bottom: 30px;
+}
+.introBackground .login .closeButton{
+    text-align: right;
+    margin-top:-40px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: 0;
+    position: relative;
+}
+.introBackground .login p {
+    font-size: 16px;
+}
+.introBackground .login input[type=text] {
+    background-color: white;
+    color: #979797b4;
+}
+.introBackground .login button {
+    margin-top: 10px;
+}
+.introBackground .login #modalLogin {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.introBackground .login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.6);
+}
+.show {
+    display: block !important;
+}
+.hide {
+    display: none !important;
+}
+/* ------------------------------ About Us Section ----------------------------- */
+.aboutUs {
+    background-color: #60953e;
+    padding: 30px;
+}
+.about span {
+    width: 50%;
+    padding: 30px;
+    margin: auto;
+    font-size: 1.6rem;
+}
+.about span img {
+    margin-left: 20px;
+    color: white;
+    height: 20px;
+    padding: 0;
+}
+.about input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+.about .infoSection {
+    overflow: hidden;
+}
+.about .infoSection-label {
+    display: flex;
+    padding: 1em;
+    cursor: pointer;
+    background: #60953e;
+    color: #fff;
+    text-align: center;
+}
+.about .infoSection-content {
+    max-height: 0;
+    padding: 0 1em;
+    background: white;
+    transition: all 0.35s;
+}
+.about .infoSection-content div{
+    padding: 2em 1em;
+}
+.about input:checked ~ .infoSection-content {
+    max-height: 100vh;
+    padding: 1em;
+}
+/* --------------------------------- Footer --------------------------------- */
+.footer {
+    background: #512e26;
+    min-height: 200px;
+    max-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.footer img {
+    height: 50px;
+    padding: 10px 20px;
+}
+/* ------------------------------ Main Section ------------------------------ */
+.main {
+    background-color: white;
+    margin: 0;
+    padding: 0 25px;
+}
+.main .dishesDisplay {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 25px;
+    row-gap: 25px;
+}
+.main .dishesDisplay div {
+    margin: auto;
+}
+.main .dishesDisplay div img {
+    width: 100%;
+    margin: auto;
+}
+.main .dishesDisplay div h3 {
+    text-align: center;
+    min-height: 30px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+/********** * MOBILE * **********/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+   /* ------------------------------ Intro Section ----------------------------- */
+   /* ------------------------------ About Us Section ----------------------------- */
+    .introBackground {
+        min-height: 70vh;
+        background-position: 45%;
+        grid-template-columns: 1fr;
+   }
+    .introBackground img {
+        width: 80%;
+   }
+    .introBackground h3 {
+        margin-top: -5px;
+   }
+    .introBackground form {
+        margin: 0;
+   }
+    .introBackground form input {
+        width: 80vw;
+   }
+    .about span {
+        width: 90%;
+        padding: 30px;
+        font-size: 1.2rem;
+   }
+   .about span img {
+    margin-left: 10px;
+    height: 14px;
+}
+    .about input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+   }
+
+   .about input:checked ~ .infoSection-content {
+    max-height: 200vh;
+    padding: 1em;
+}
+   /* ---------------------------------- Modal --------------------------------- */
+.introBackground .login {
+    background: black;
+    max-width: 90%;   
+}
+.introBackground .login input{
+    width: 100%;
+    
+}
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+   /* ------------------------------ Intro Section ----------------------------- */
+   /* ------------------------------ About Us Section ----------------------------- */
+    .introBackground {
+        min-height: 60vh;
+        grid-template-columns: 1fr 2fr;
+   }
+    .introBackground img {
+        width: 200px;
+   }
+    .introBackground h3 {
+        margin-top: -5px;
+   }
+    .introBackground form {
+        margin: 0;
+   }
+    .about span {
+        width: 90%;
+        padding: 30px;
+        font-size: 1.4rem;
+   }
+   .about input:checked ~ .infoSection-content {
+    max-height: 200vh;
+    padding: 1em;
+}
+}
+/********** * TABLET * **********/
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+   /* ------------------------------ Intro Section ----------------------------- */
+    .introBackground {
+        min-height: 60vh;
+   }
+    .introBackground img {
+        width: 70%;
+   }
+}
+/* Large devices (laptops/desktops) */
+@media only screen and (min-width: 1025px) {
+   /* ------------------------------ Intro Section ----------------------------- */
+    .introBackground {
+        min-height: 70vh;
+        background-size: cover;
+        padding: 30px;
+        grid-template-columns: 1fr 2fr;
+   }
+    .introBackground img {
+        width: 70%;
+   }
+}

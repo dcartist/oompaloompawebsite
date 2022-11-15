@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" href="./images/cupcake.png" />
+
+<meta name="Description" content="Amelia's Bakery">
+<meta name="Keywords" content="bake, goods, bakery, food, sample, site">
+<meta name="theme-color" content="#000000" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://abakery.vercel.app/">
+<meta property="og:title" content="Amelia's Bakery">
+<meta property="og:description" content="Delicious and wonderful baked goods!">
+<meta property="og:image" content="./images/LOGOsm.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://abakery.vercel.app/">
+<meta property="twitter:title" content="Amelia's Bakery">
+<meta property="twitter:description" content="Delicious and wonderful baked goods!">
+<meta property="twitter:image" content="./images/LOGOsm.png">
+
+<title>Amelia's Bakery</title>
+<link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div class="appBase">
+        <section class="introBackground">
+            <div>
+                <!-- Begin the Modal -->
+                <div class="hide" id="Modal">
+                    <div class="login-overlay"></div>
+                        <div class="login">  
+                            <p class="close" id="close">
+                                <button class="closeButton"> X Close</button>
+                            </p>
+                            
+                            <form>
+                      <p>Please enter your email to login </p>
+                      <p>
+                      <input type="text" placeholder="Email Address" id="modalInput"></input>
+                      </p>
+                    </form>
+                      <button class="smallButton greenBorderButton loginButton" id="modalLogin">Login</button>
+                       <p id="modalMessage"> &nbsp </p>
+                    </div>
+                    </div>
+                <!-- End the Modal -->
+                <img src="./images/LOGO.png" alt="Amelia's Bakery Logo" />
+                <h3>JOIN THE TEAM</h3>
+                <p id="message"> &nbsp </p>
+                <form>
+                    <p>
+                        <input type="text" placeholder="Email Address" id="SignupInput" onchange="emailSignUp()"></input>
+                    </p>
+                </form>
+                <button class="smallButton greenFilledButton loginButton" id="signUp"> SIGN UP</button>
+                <button class="smallButton greenBorderButton loginButton" id="login">LOGIN</button>
+            </div>
+        </section>
+        <!-- About Section  -->
+        <section class="about">
+            <div class="infoSection">
+                <input type="checkbox" id="tab1"></input>
+                <label class="infoSection-label" for="tab1"><span class="whiteBorderButton">LEARN MORE ABOUT US <img
+                            src="./images/downArrow.svg" alt="down arrow" /></span></label>
+                <div class="infoSection-content">
+                    <div>
+
+                        <h2>Amelia's Bakery</h2>
+                        <p>
+                        Starting on Saturday and worked until Sunday, Amelia's bakery is a code challenge based on a splash page's mockup design. </p>
+                        <p>
+                        The project contains two sections:</p>
+                        <ol>
+                            <li>HTML version</li>
+                            <ul>
+                                <li>Github: <a href="https://github.com/dcartist/bakeryHTM" rel="noopener noreferrer" target="_blank">https://github.com/dcartist/bakeryHTML</a></li>
+                                <li>Deployed: <a href="https://abakery.vercel.app" rel="noopener noreferrer" target="_blank">https://abakery.vercel.app</a></li>
+                            </ul>
+                            <li>React version</li>
+                            <ul>
+                                <li>Github: <a href="https://github.com/dcartist/bakery" rel="noopener noreferrer" target="_blank">https://github.com/dcartist/bakery</a></li>
+                                <li>Deployed: <a href="https://ameliasbakery.vercel.app" rel="noopener noreferrer" target="_blank">https://ameliasbakery.vercel.app</a></li>
+                            </ul>
+                        </ol>
+                        <p>
+                        The HTML version is created with vanilla js. The features contain form validation and a modal. A user can enter their email and view a message if their email is valid on both login and signup. 
+                        </p>
+                        <p>
+                        The second version is created with the react framework. The features contained in this projects are:
+                        </p>
+                        <ul>
+                            <li><b>Form Validation</b>:  A user can enter their email and view a message if their email is valid on both login and signup. They must have a valid email address to proceed to the dashboard.</li>
+                            <li><b>Modal</b>: The user can log in to the dashboard</li>
+                            <li><b>Dashboard</b>: The user can function search through desserts from the MealDB API (<a href="https://www.themealdb.com/api.php" rel="noopener noreferrer" target="_blank">https://www.themealdb.com/api.php</a></li>
+                        </ul>
+                        <p>The npm packages in the react version are Node-Sass, Axios, React-Router-Dom, Semantic React UI (for global font default).</p>
+                        <p>Both versions are mobile responsive.</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer Section -->
+        <section class="footer">
+            <div>
+                <img src="./images/FACEBOOK.png" alt="Facebook" />
+                <img src="./images/INSTA.png" alt="Instagram" />
+            </div>
+            <p>Privacy Policy</p>
+        </section>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
